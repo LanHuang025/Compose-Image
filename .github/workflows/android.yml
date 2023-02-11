@@ -27,7 +27,7 @@ jobs:
     - name: 检测当前文件
       run: ls
     - name: 检测app文件
-      run: ls /app
+      run: ls app
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
