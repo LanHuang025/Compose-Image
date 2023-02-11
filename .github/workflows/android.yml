@@ -31,7 +31,7 @@ jobs:
     - name: 检测build文件夹
       run: ls app/build
     - name: 检测outputs文件夹
-      run: ls app/build
+      run: ls app/build/outputs
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
