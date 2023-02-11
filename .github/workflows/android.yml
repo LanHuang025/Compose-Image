@@ -24,12 +24,14 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: 检测当前文件
+    - name: 检测当前文件夹
       run: ls
-    - name: 检测app文件
+    - name: 检测app文件夹
       run: ls app
+    - name: 检测build文件夹
+      run: ls app/build
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
           name: apk
-          path: build/app/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
