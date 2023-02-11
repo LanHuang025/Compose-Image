@@ -34,10 +34,12 @@ jobs:
       run: ls app/build/outputs
     - name: 检测apk文件夹
       run: ls app/build/outputs/apk
+    - name: 检测debug文件夹
+      run: ls app/build/outputs/apk/debug
     - name: 检测release文件夹
       run: ls app/build/outputs/apk/release
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
           name: apk
-          path: app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
