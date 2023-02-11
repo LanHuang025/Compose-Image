@@ -30,8 +30,10 @@ jobs:
       run: ls app
     - name: 检测build文件夹
       run: ls app/build
+    - name: 检测outputs文件夹
+      run: ls app/build
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
           name: apk
-          path: app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/app-release.apk
